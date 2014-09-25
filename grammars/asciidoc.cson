@@ -261,6 +261,226 @@
         ]
       }
 
+      # Matches XML AsciiDoc code blocks
+      #
+      {
+        'begin': '^\\[source,\\s*(xml|xsl|xslt)\\]$'
+        'beginCaptures':
+          '0': 'name': 'support.asciidoc'
+        'end': '^\\s*$'
+        'patterns': [
+          {
+            'begin': '(^\\s*-{4,}\\s*$)'
+            'beginCaptures':
+              '0': 'name': 'support.asciidoc'
+            'end': '\\1'
+            'endCaptures':
+              '0': 'name': 'support.asciidoc'
+            'patterns': ['include': 'text.xml']
+          }
+        ]
+      }
+
+      # Matches JSON AsciiDoc code blocks
+      #
+      {
+        'begin': '^\\[source,\\s*(json)\\]$'
+        'beginCaptures':
+          '0': 'name': 'support.asciidoc'
+        'end': '^\\s*$'
+        'patterns': [
+          {
+            'begin': '(^\\s*-{4,}\\s*$)'
+            'beginCaptures':
+              '0': 'name': 'support.asciidoc'
+            'end': '\\1'
+            'endCaptures':
+              '0': 'name': 'support.asciidoc'
+            'patterns': ['include': 'source.json']
+          }
+        ]
+      }
+
+      # Matches HTML AsciiDoc code blocks
+      #
+      {
+        'begin': '^\\[source,\\s*(html)\\]$'
+        'beginCaptures':
+          '0': 'name': 'support.asciidoc'
+        'end': '^\\s*$'
+        'patterns': [
+          {
+            'begin': '(^\\s*-{4,}\\s*$)'
+            'beginCaptures':
+              '0': 'name': 'support.asciidoc'
+            'end': '\\1'
+            'endCaptures':
+              '0': 'name': 'support.asciidoc'
+            'patterns': ['include': 'text.html.basic']
+          }
+        ]
+      }
+
+      # Matches Bash AsciiDoc code blocks
+      #
+      {
+        'begin': '^\\[source,\\s*(bash|sh)\\]$'
+        'beginCaptures':
+          '0': 'name': 'support.asciidoc'
+        'end': '^\\s*$'
+        'patterns': [
+          {
+            'begin': '(^\\s*-{4,}\\s*$)'
+            'beginCaptures':
+              '0': 'name': 'support.asciidoc'
+            'end': '\\1'
+            'endCaptures':
+              '0': 'name': 'support.asciidoc'
+            'patterns': ['include': 'source.shell']
+          }
+        ]
+      }
+
+      # Matches CSS AsciiDoc code blocks
+      #
+      {
+        'begin': '^\\[source,\\s*(css)\\]$'
+        'beginCaptures':
+          '0': 'name': 'support.asciidoc'
+        'end': '^\\s*$'
+        'patterns': [
+          {
+            'begin': '(^\\s*-{4,}\\s*$)'
+            'beginCaptures':
+              '0': 'name': 'support.asciidoc'
+            'end': '\\1'
+            'endCaptures':
+              '0': 'name': 'support.asciidoc'
+            'patterns': ['include': 'source.css']
+          }
+        ]
+      }
+
+      # Matches LESS AsciiDoc code blocks
+      #
+      {
+        'begin': '^\\[source,\\s*(less)\\]$'
+        'beginCaptures':
+          '0': 'name': 'support.asciidoc'
+        'end': '^\\s*$'
+        'patterns': [
+          {
+            'begin': '(^\\s*-{4,}\\s*$)'
+            'beginCaptures':
+              '0': 'name': 'support.asciidoc'
+            'end': '\\1'
+            'endCaptures':
+              '0': 'name': 'support.asciidoc'
+            'patterns': ['include': 'source.css.less']
+          }
+        ]
+      }
+
+      # Matches Java AsciiDoc code blocks
+      #
+      {
+        'begin': '^\\[source,\\s*(java)\\]$'
+        'beginCaptures':
+          '0': 'name': 'support.asciidoc'
+        'end': '^\\s*$'
+        'patterns': [
+          {
+            'begin': '(^\\s*-{4,}\\s*$)'
+            'beginCaptures':
+              '0': 'name': 'support.asciidoc'
+            'end': '\\1'
+            'endCaptures':
+              '0': 'name': 'support.asciidoc'
+            'patterns': ['include': 'source.java']
+          }
+        ]
+      }
+
+      # Matches C/C++ AsciiDoc code blocks
+      #
+      {
+        'begin': '^\\[source,\\s*(c|\\+\\+)\\]$'
+        'beginCaptures':
+          '0': 'name': 'support.asciidoc'
+        'end': '^\\s*$'
+        'patterns': [
+          {
+            'begin': '(^\\s*-{4,}\\s*$)'
+            'beginCaptures':
+              '0': 'name': 'support.asciidoc'
+            'end': '\\1'
+            'endCaptures':
+              '0': 'name': 'support.asciidoc'
+            'patterns': ['include': 'source.c++']
+          }
+        ]
+      }
+
+      # Matches Objective C AsciiDoc code blocks
+      #
+      {
+        'begin': '^\\[source,\\s*(objc|objectivec)\\]$'
+        'beginCaptures':
+          '0': 'name': 'support.asciidoc'
+        'end': '^\\s*$'
+        'patterns': [
+          {
+            'begin': '(^\\s*-{4,}\\s*$)'
+            'beginCaptures':
+              '0': 'name': 'support.asciidoc'
+            'end': '\\1'
+            'endCaptures':
+              '0': 'name': 'support.asciidoc'
+            'patterns': ['include': 'source.objc++']
+          }
+        ]
+      }
+
+      # Matches PHP AsciiDoc code blocks
+      #
+      {
+        'begin': '^\\[source,\\s*(php)\\]$'
+        'beginCaptures':
+          '0': 'name': 'support.asciidoc'
+        'end': '^\\s*$'
+        'patterns': [
+          {
+            'begin': '(^\\s*-{4,}\\s*$)'
+            'beginCaptures':
+              '0': 'name': 'support.asciidoc'
+            'end': '\\1'
+            'endCaptures':
+              '0': 'name': 'support.asciidoc'
+            'patterns': ['include': 'text.html.php']
+          }
+        ]
+      }
+
+      # Matches SQL AsciiDoc code blocks
+      #
+      {
+        'begin': '^\\[source,\\s*(sql)\\]$'
+        'beginCaptures':
+          '0': 'name': 'support.asciidoc'
+        'end': '^\\s*$'
+        'patterns': [
+          {
+            'begin': '(^\\s*-{4,}\\s*$)'
+            'beginCaptures':
+              '0': 'name': 'support.asciidoc'
+            'end': '\\1'
+            'endCaptures':
+              '0': 'name': 'support.asciidoc'
+            'patterns': ['include': 'source.sql']
+          }
+        ]
+      }
+
       # Matches language-agnostic AsciiDoc code blocks
       #
       # Examples
@@ -303,12 +523,12 @@
       # Examples
       #
       #   [source,js]
-      #   ----
+      #   ```javascript
       #   var http = require('http');
       #   http.createServer(function (req, res) {
       #     res.end('Hello World\n');
       #   }).listen(1337, '127.0.0.1');
-      #   ----
+      #   ```
       {
         'begin': '^`{3,}\\s*(javascript|js)\\s*$'
         'beginCaptures':
